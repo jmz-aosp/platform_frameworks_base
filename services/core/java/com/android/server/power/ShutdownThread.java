@@ -197,7 +197,7 @@ public final class ShutdownThread extends Thread {
                                             com.android.internal.R.array.shutdown_reboot_actions);
 
                                     if (actions != null && which < actions.length)
-                                        mRebootReason = actions[which];
+                                        mReason = actions[which];
 
                                 }
                             })
