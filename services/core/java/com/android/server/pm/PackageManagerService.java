@@ -21018,13 +21018,14 @@ Slog.v(TAG, ":: stepped forward, applying functor at tag " + parser.getName());
 
         @Override
         public void setResourceDirs(int userId, String packageName, String[] resourceDirs) {
-            synchronized (mPackages) {
-                final PackageSetting ps = mSettings.mPackages.get(packageName);
-                if (ps == null) {
-                    return;
-                }
-                ps.setResourceDirs(resourceDirs, userId);
-            }
+            // TODO: uncomment when we integrate OMS properly
+            // synchronized (mPackages) {
+            //     PackageSetting ps = mSettings.mPackages.get(packageName);
+            //     if (ps == null) {
+            //         return;
+            //     }
+            //     ps.setResourceDirs(resourceDirs, userId);
+            // }
         }
     }
 
