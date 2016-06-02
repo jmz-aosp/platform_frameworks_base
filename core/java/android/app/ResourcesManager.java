@@ -994,7 +994,11 @@ public class ResourcesManager {
             if (r != null) {
                 final ResourcesKey key = updatedResourceKeys.get(r.getImpl());
                 if (key != null) {
-                    r.setImpl(findOrCreateResourcesImplForKeyLocked(key));
+                    final ResourcesImpl impl = findOrCreateResourcesImplForKeyLocked(key);
+                    if (impl == null) {
+                        throw new Resources.NotFoundException("failed to load");
+                    }
+                    r.setImpl(impl);
                 }
             }
         }
@@ -1009,27 +1013,9 @@ public class ResourcesManager {
                     if (key != null) {
                         final ResourcesImpl impl = findOrCreateResourcesImplForKeyLocked(key);
                         if (impl == null) {
-                            throw new Resources.NotFoundException("failed to load " + libAsset);
+                            throw new Resources.NotFoundException("failed to load");
                         }
                         r.setImpl(impl);
-                    }
-                }
-            }
-
-            // Update any references to ResourcesImpl that require reloading for each Activity.
-            for (ActivityResources activityResources : mActivityResourceReferences.values()) {
-                final int resCount = activityResources.activityResources.size();
-                for (int i = 0; i < resCount; i++) {
-                    final Resources r = activityResources.activityResources.get(i).get();
-                    if (r != null) {
-                        final ResourcesKey key = updatedResourceKeys.get(r.getImpl());
-                        if (key != null) {
-                            final ResourcesImpl impl = findOrCreateResourcesImplForKeyLocked(key);
-                            if (impl == null) {
-                                throw new Resources.NotFoundException("failed to load " + libAsset);
-                            }
-                            r.setImpl(impl);
-                        }
                     }
                 }
             }
