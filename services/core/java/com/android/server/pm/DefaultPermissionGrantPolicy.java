@@ -785,6 +785,7 @@ final class DefaultPermissionGrantPolicy {
                 grantRuntimePermissionsLPw(fiPackage, MICROPHONE_PERMISSIONS, userId);
                 grantRuntimePermissionsLPw(fiPackage, LOCATION_PERMISSIONS, userId);
                 grantRuntimePermissionsLPw(fiPackage, SMS_PERMISSIONS, userId);
+            }
 
             // Storage Manager
             Intent storageManagerIntent = new Intent(StorageManager.ACTION_MANAGE_STORAGE);

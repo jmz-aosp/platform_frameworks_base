@@ -6565,7 +6565,7 @@ public final class Settings {
             TTY_MODE_ENABLED,
             INCALL_POWER_BUTTON_BEHAVIOR,
             QS_TILES,
-            ADVANCED_REBOOT
+            ADVANCED_REBOOT,
             NIGHT_DISPLAY_CUSTOM_START_TIME,
             NIGHT_DISPLAY_CUSTOM_END_TIME,
             NIGHT_DISPLAY_AUTO_MODE,

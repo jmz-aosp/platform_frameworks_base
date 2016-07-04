@@ -534,7 +534,7 @@ public class SoundPool {
         if ((mAttributes.getAllFlags() & AudioAttributes.FLAG_AUDIBILITY_ENFORCED) != 0) {
 // FIXME: should also check usage when set properly by camera app
 //          && (mAttributes.getUsage() == AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
-            boolean cameraSoundForced = false;
+            cameraSoundForced = false;
             try {
                 cameraSoundForced = getService().isCameraSoundForced();
             } catch (RemoteException e) {
