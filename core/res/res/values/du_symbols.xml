@@ -18,32 +18,6 @@
 -->
 <resources>
 
-  <!-- ADB notification -->
-  <java-symbol type="string" name="adb_net_active_notification_title" />
-  <java-symbol type="string" name="adb_both_active_notification_title" />
-  <java-symbol type="string" name="adb_active_generic_notification_message" />
-
-  <!-- Config Power Menu -->
-  <java-symbol type="drawable" name="ic_lock_reboot" />
-  <java-symbol type="string" name="global_action_reboot" />
-  <java-symbol type="string" name="reboot_reboot" />
-  <java-symbol type="array" name="shutdown_reboot_actions" />
-  <java-symbol type="array" name="shutdown_reboot_options" />
-  <java-symbol type="string" name="reboot_system" />
-  <java-symbol type="string" name="reboot_progress" />
-  <java-symbol type="drawable" name="ic_lock_power_screenshot" />
-  <java-symbol type="string" name="powermenu_screenshot" />
-  <java-symbol type="drawable" name="ic_settings_powermenu" />
-  <java-symbol type="drawable" name="ic_lock_power_screenrecord" />
-  <java-symbol type="string" name="powermenu_screenrecord" />
-
-  <!-- Screen Recording -->
-  <java-symbol type="bool" name="config_enableScreenrecordChord" />
-
-  <!-- Powermenu Torch -->
-  <java-symbol type="drawable" name="ic_lock_torch" />
-  <java-symbol type="string" name="global_action_torch" />
-
   <!-- Notification and battery light -->
   <java-symbol type="bool" name="config_intrusiveNotificationLed" />
   <java-symbol type="bool" name="config_multiColorNotificationLed" />
